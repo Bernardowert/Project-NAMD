@@ -1,0 +1,33 @@
+.btn{
+    display: inline-block;
+    padding: 0 2.8rem;
+    line-height: 5rem;
+    border-radius: 12px;
+    color: var(--white-01);
+    font-family: 'Inter',sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 1.5px solid transparent;
+    transition: all .3s;
+    &-primary{
+        background-color: var(--yellow-01);
+        &:hover{
+            border-color: var(--gray-01);
+            background-color: transparent;
+            color: var(--gray-01);
+        }
+    }
+}
+
+.btn-see{
+    display: inline-block; 
+    color: var(--yellow-01);
+    font-family: 'Inter',sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.4rem; 
+    transition: color .3s;
+    &:hover{
+        color: #ff800f;
+    }
+}

@@ -1,0 +1,571 @@
+@include responsive('laptop'){
+    .s-hero{
+        .card-main{
+            padding: 0 2.6rem;
+        }
+    }
+    .card-offers{
+        max-width: 37rem;
+    }
+    html{
+        font-size: 57.5%;
+    }
+}
+ @media(max-width: 1050px){
+
+    .s-offers,.s-recommended{
+        .items{
+            .card-offers{
+                max-width: 34rem;
+            }
+        }
+    }
+    .s-benefit{
+        .area-image{
+            max-width: 45.4rem;
+        }
+    }
+    .s-review{
+        position: relative;
+        padding-top: 15.6rem;
+        .container{
+            position: initial;
+        }
+        .card-users{
+            .info-rating{
+                right: -39.5rem;
+            }
+        }
+        .infos{
+           top: 3rem;
+           left: calc(50% - 25%);
+           max-width: 50%;
+           text-align: center;
+        }
+    }
+ }
+@include responsive('tablet'){
+    header{
+        .right{
+            gap: 2.6rem;
+        }
+    }
+    .s-hero{
+        .card-main{
+            flex-direction: column;
+            height: 71rem;
+            padding: 5.6rem 2rem;
+            .area-text,.area-form{
+                flex: initial;
+            }
+            .area-text{
+                max-width: 100%;
+                text-align: center;
+                h1{
+                    font-size: 4.8rem;
+                    max-width: 695px;
+                    br{
+                        display: none;
+                    }
+                }
+                .p-class{
+                    max-width: 100%;
+                }
+            }
+            .area-form{
+                width: 100%;
+                max-width: 70%;
+                .group{
+                    .form-group{
+                        flex: 1;
+
+                    }
+                }
+            }
+        }
+    }
+    html{
+        font-size: 62.5%;
+    }
+    .s-offers,.s-recommended{
+        .top{
+            flex-direction: column;
+            gap: 3rem;
+            .left{
+                text-align: center;
+                .p-class{
+                    max-width: 100%;
+                }
+            }
+        }
+        .items{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2.4rem;
+            .card-offers{
+                max-width: initial;
+                &:last-child{
+                    grid-column: span 2;
+                }
+                .image{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .s-benefit{
+        .container{
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 7.8rem;
+        }
+        .area-image{
+            width: 100%;
+            flex: initial;
+            .images{
+                &.b-02{
+                    right: -26px;
+                }
+            }
+        }
+        .area-text{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 100%;
+            h2{
+                font-size: 4rem;
+            }
+            .p-class{
+                max-width: 47.8rem;
+                
+            }
+            ul{
+                li{
+                    border: 1.5px solid var(--white-03);
+                    padding: 2rem;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    .s-faq{
+          .items{
+              .accordion{
+                   .title{
+                        h3{
+                            font-size: 1.7rem;
+                        }
+                   }
+              }
+          }
+    }
+    .s-review{
+        .infos{
+            h2{
+                font-size: 3.6rem;
+            }
+        }
+        .card-users{
+            max-width: 100%;
+            .info-rating{
+                bottom: 0;
+                right: calc(50% - 40%);
+                max-width: 80%;
+                bottom: 0.8rem;
+                height: 20.6rem;
+                padding: 3rem;
+                .top{
+                    margin-bottom: 2rem;
+                    .p-class{
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        .swipers-btns{
+            right: calc(50% - 36px);
+        }
+    }
+    footer{
+        padding-top: 4.6rem;
+        .top{
+            flex-direction: column;
+            text-align: center;
+            gap: 2rem;
+        }
+        .main{
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            .left{
+                max-width: 100%;
+                .logo{
+                    justify-content: center;
+                }
+            }
+            nav{
+                width: 100%;
+                max-width: 80%;
+            }
+        }
+    }
+}
+@include responsive('tablet-low'){
+    header{
+        .right{
+             nav,.btn{
+                display: none;
+             }
+             .btn-mobile{
+                display: block;
+             }
+        }
+    }
+    .s-hero{
+        .card-main{
+            justify-content: initial;
+            gap: 4rem;
+            height: 63rem;
+            .area-text{
+                h1{
+                    font-size: 3.6rem;
+                }
+                .p-class{
+                    max-width: 40.3rem;
+                    margin: 0 auto;
+                }
+            }
+            .area-form{
+                max-width: 100%;
+            }
+        }
+    }
+    .s-partners{
+        .container{
+            flex-direction: column;
+            gap: 2rem;
+            
+        }
+        .area-text{
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+    .s-offers,.s-recommended{
+        .top{
+            .left{
+                h2{
+                    font-size: 4rem;
+                }
+                .p-class{
+                    max-width: 46.5rem;
+                    margin: 0 auto;
+                    margin-top: 1.6rem;
+                }
+            }
+        }
+        .items{
+            grid-template-columns: 1fr;
+            .card-offers{
+                .image{
+                    height: 100vh;
+                }
+                &:last-child{
+                    grid-column: initial;
+                }
+            }
+        }
+    }
+    .s-benefit{
+        .area-text{
+            h2{
+                font-size: 3.4rem;
+            }
+        }
+    }
+    .s-faq{
+        .top{
+            h2{
+                font-size: 4rem;
+            }
+            .p-class{
+                max-width: 55.9rem;
+            }
+        }
+        .items{
+            grid-template-columns: 1fr;
+            .accordion{
+                max-width: 100%;
+            }
+        }
+    }
+    .s-review{
+        .card-users{
+            .info-rating{
+                padding: 2rem;
+                max-width: 95%;
+                right: calc(50% - 47%);
+            }
+        }
+        .infos{
+            max-width: 100%;
+            left: calc(50% - 50%);
+        }
+    }
+}
+
+@include responsive('mobile'){
+    .s-hero{
+        padding-top: 12.4rem;
+        .card-main{
+            .area-text{
+                h1{
+                    font-size: 2.1rem;
+                    max-width: 45.7rem;
+                }
+            }
+        }
+    }
+    .s-partners{
+        ul{
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+    .s-offers,.s-recommended{
+        .top{
+            .left{
+                h2{
+                    font-size: 3rem;
+                }
+            }
+        }
+        .items{
+            .card-offers{
+                .image{
+                    height: 22rem;
+                }
+            }
+        }
+    }
+    .s-benefit{
+        .area-text{
+            h2{
+                font-size: 2.7rem;
+            }
+        }
+        .area-image{
+            .images{
+                &.b-02{
+                    right: -2.5rem;
+                }
+            }
+        }
+    }
+    .s-faq{
+        .top{
+            h2{
+                font-size: 3rem;
+            }
+            .p-class{
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                max-width: 47.5rem;
+            }
+        }
+    }
+    .s-review{
+        .infos{
+            h2{
+                font-size: 3.2rem;
+            }
+        }
+        .card-users{
+            .info-rating{
+                height: 25.6rem;
+            }
+        }
+    }
+    footer{
+        .top{
+            .p-class{
+                max-width: 25.4rem;
+                margin: 0 auto;
+            }
+        }
+        .main{
+            .p-class{
+                max-width: 26.7rem;
+                text-align: center;
+            }
+            nav{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include responsive('mobile-low'){
+    .s-hero{
+        .card-main{
+            gap: 2rem;
+            height: 51rem;
+            padding: 2.6rem 2rem;
+            .area-text{
+                border: 1px solid #fff;
+                padding: 5px;
+                h1{
+                    font-size: 1.6rem;
+                }
+                .p-class{
+                    font-size: 1.2rem;
+                }
+            }
+            .area-form{
+                padding: 2.2rem;
+                .heading{
+                    margin-bottom: 1.4rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .s-partners{
+        .area-text{
+             p{
+                max-width: 27.5rem;
+             }
+        }
+    }
+    .s-offers,.s-recommended{
+        .top{
+            .left{
+                h2{
+                    font-size: 2.6rem;
+                }
+                .p-class{
+                    font-size: 1.4rem;
+                    margin-top: 6px;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+        .items{
+            .card-offers{
+                .info{
+                    .heading{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 2rem;
+                        .left{
+                            width: 100%;
+                            h3{
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .bottom{
+                        flex-direction: column-reverse;
+                        align-items: flex-start;
+                        gap: 1.3rem;
+                        strong{
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .s-benefit{
+        .area-text{
+            h2{
+                margin-bottom: 1rem;
+            }
+            .p-class{
+                font-size: 1.6rem;
+            }
+            ul{
+                margin-top: 2.4rem;
+            }
+        }
+        .area-image{
+            height: 37rem;
+            .images{
+                &.b-01{
+                    max-width: 27.4rem;
+                    height: initial;
+                }
+                &.b-02{
+                    max-width: 20.9rem;
+                    right: -1.3rem;
+                }
+            }
+        }
+    }
+    .s-faq{
+        .top{
+            h2{
+                font-size: 2.5rem;
+            }
+        }
+        .items{
+            .accordion{
+                .title{
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                }
+                .p-class{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .s-review{
+        padding-top: 12.6rem;
+        .infos{
+             h2{
+                font-size: 2.6rem;
+             }
+        }
+        .card-users{
+            .info-rating{
+                height: 29.6rem;
+            }
+        }
+    }
+    footer{
+        .top{
+             .left{
+                h2{
+                    font-size: 3rem;
+                }
+                .p-class{
+                    max-width: 22.6rem;
+                }
+             }
+             form{
+                  input{
+                    padding-left: 0.4rem;
+                  }
+                  .btn{
+                     padding: 0 0.8rem;
+                  }
+             }
+        }
+        .main{
+             nav{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 3rem;
+             }
+        }
+        .p-class{
+             &.align{
+                font-size: 1.5rem;
+             }
+        }
+    }
+}

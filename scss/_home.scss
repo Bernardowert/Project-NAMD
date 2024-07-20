@@ -1,0 +1,184 @@
+.s-hero{
+    padding-top: 15.4rem;
+}
+
+.s-partners{
+    padding-top: 3.7rem;
+    padding-bottom: 3.3rem;
+    .container{
+        @include flex-justify(space-between);
+    }
+    .area-text{
+        flex: 1;
+        max-width: 31.7rem;
+        h2{
+            font-size: 3.2rem;
+            margin-bottom: 7px;
+        }
+    }
+    ul{
+        flex: 1;
+        max-width: 81.7rem;
+        @include flex-justify(space-between);
+    }
+}
+
+.s-offers{
+    padding-top: 9.6rem;
+    padding-bottom: 7.2rem;
+    background-color: var(--gray-03);
+    .top{
+        @include flex-justify(space-between);
+        .left{
+            p{
+                margin-top: 1.6rem;
+                max-width: 50rem;
+            }
+        }
+    }
+    .items{
+        @include flex-justify(space-between);
+        margin-top: 5.6rem;
+    }
+}
+
+.s-benefit{
+    padding-top: 9.6rem;
+    padding-bottom: 7.2rem;
+    .container{
+       display: flex;
+       align-items: flex-end;
+       justify-content: space-between;
+    }
+    .area-text{
+         flex: 1;
+         max-width: 58rem;
+         h2{
+            margin-bottom: 1.6rem;
+         }
+         ul{
+            margin-top: 4.4rem;
+            li{
+                @include flex-center;
+                gap: 1.6rem;
+                &:not(:last-child){
+                    margin-bottom: 3.2rem;
+                }
+                .icon{
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    @include flex-justify(center);
+                    background-color: var(--gray-03);
+                    border-radius: 50%;
+                }
+                .info{
+                    h3{
+                        margin-bottom: 0.8rem;
+                    }
+                }
+            }
+         }
+    }
+    .area-image{
+       flex: 1;
+       max-width: 50.4rem;
+       height: 53.5rem;
+       position: relative;
+       .images{
+        position: absolute;
+        &.b-01{
+          top: 0;
+          height: 100%;
+          left: 0;
+        }
+        &.b-02{
+         bottom: 5.6rem;
+         right: 0;
+        }
+       }
+    }
+}
+
+.s-recommended{
+    padding-top: 9.6rem;
+    padding-bottom: 7.2rem;
+    background-color: var(--gray-03);
+    .top{
+        @include flex-justify(space-between);
+        .left{
+            p{
+                margin-top: 1.6rem;
+                max-width: 50rem;
+            }
+        }
+    }
+    .items{
+        @include flex-justify(space-between);
+        margin-top: 5.6rem;
+    }
+}
+
+.s-review{
+    background-color: var(--gray-03);
+    padding-top: 9.6rem;
+    padding-bottom: 7.2rem;
+    .container{
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+    }
+    .infos{
+        position: absolute;
+        right: 15.1rem;
+        width: 100%;
+        max-width: 31rem;
+    }
+    .swipers-btns{
+        position: absolute;
+        right: 26.4rem;
+        bottom: 2.5rem;
+        width: 100%;
+        max-width: 7.2rem;
+        @include flex-justify(space-between);
+        flex-direction: row-reverse;
+        height: 2.4rem;
+        .arrow{
+            position: initial;
+            transition: opacity .3s;
+            width: initial;
+            height: initial;
+            margin-top: initial;
+            &::after{
+                content: "";
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url("../img/arrow-left.png") no-repeat center;
+            }
+        }
+        .swiper-button-next{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.s-faq{
+    padding-top: 9.6rem;
+    padding-bottom: 7.2rem;
+    .top{
+        text-align: center;
+        .p-class{
+            max-width: 69.9rem;
+            margin: 0 auto;
+            margin-top: 1.6rem;
+        }
+    }
+    .items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        max-width: 101.4rem;
+        margin: 0 auto;
+        margin-top: 5.6rem;
+        gap: 3.2rem 4.5rem;
+    }
+}

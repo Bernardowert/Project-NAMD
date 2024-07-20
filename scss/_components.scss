@@ -1,0 +1,267 @@
+.card-offers{
+    flex: 1;
+    max-width: 38.4rem; 
+    border-radius: 3.2rem;
+    background-color: var(--white-01);
+    box-shadow: 0px 2px 44px 0px rgba(50, 47, 42, 0.08);
+    padding: 2.4rem 2.4rem 3.6rem;
+    .image{
+         width: 100%;
+         max-width: 33.6rem;
+         border-radius: 1.6rem;
+         height: 22rem;
+         overflow: hidden;
+         filter: grayscale(30%);
+         transition: filter .3s;
+         img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .3s;
+         }
+    }
+    .info{
+        margin-top: 1.6rem;
+         .heading{
+             @include flex-justify(space-between);
+             margin-bottom: 2rem;
+             .left{
+                .local{
+                    @include flex-center;
+                    gap: 0.8rem;
+                    margin-top: 0.8rem;
+                }
+             }
+             .right{
+                 @include flex-center;
+                 gap: 0.7rem;
+                 b{
+                    color: var(--gray-01); 
+                    font-family: 'Inter',sans-serif;
+                    font-size: 1.2rem;
+                    line-height: 120%; 
+                 }
+             }
+         }
+         .bottom{
+            @include flex-justify(space-between);
+            strong{
+                color: var(--gray-01);
+                font-size: 2.4rem;
+                line-height: 120%; 
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 1.2px;
+                    background-color: var(--gray-02);
+                    bottom: 0;
+                    left: 0;
+                    transition: width .3s
+                }
+            }
+            .animal{
+                @include flex-center;
+                gap: 0.8rem;
+            }
+         }
+    }
+    &:hover{
+        .info{
+            .bottom{
+                strong{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .image{
+            filter: grayscale(0);
+            img{
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+
+.card-main{
+    width: 100%;
+    height: 48rem;
+    padding: 0 5.6rem 0 9.6rem;
+    border-radius: 2.4rem;
+    background: url("../img/bg-hero.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    @include flex-justify(space-between);
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("../img/Blur.png") no-repeat center center;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-size: cover;
+        border-radius: inherit;
+    }
+    .area-text{
+        flex: 1;
+        max-width: 52.1rem;
+        .p-class{
+            color: var(--white-01);
+            max-width: 43.5rem;
+            margin-top: 2.4rem;
+        }
+    }
+    .area-form{
+        flex: 1;
+        max-width: 35.6rem;
+        height: 36.9rem;
+        padding: 3.2rem 3.2rem 2.4rem;
+        border-radius: 24px;
+        background-color: var(--white-01);
+        
+        /* Card Shadow/Card Shadow */
+        box-shadow: 0px 2px 44px 0px rgba(50, 47, 42, 0.08);
+        .heading{
+            margin-bottom: 4.4rem;
+            strong{
+                color: var(--gray-01);
+                font-family: 'Inter',sans-serif;
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 140%;
+            }
+            p{
+                color: var(--gray-02);
+                font-size: 1.2rem;
+                line-height: 120%;
+                letter-spacing: 0.06px;
+                margin-top: 0.4rem;
+            }
+        }
+        form{
+           .form-group{
+            label{
+                color: var(--gray-01);
+                font-family: 'Inter',sans-serif;
+                font-size: 1.4rem;
+                line-height: 14px; 
+                display: block;
+                margin-bottom: 0.4rem;
+             }
+             input{
+                width: 100%;
+                border-radius: 1.2rem;
+                line-height: 4.6rem;
+                background-color: var(--white-03);
+                padding: 0 1.2rem;
+                color: #000;
+                &::placeholder{
+                    color: var(--gray-02);
+                }
+             }
+           }
+           .group{
+            margin-top: 1.6rem;
+            margin-bottom: 3.2rem;
+            @include flex-center;
+            gap: 2.4rem;
+           }
+           .btn{
+            width: 100%;
+           }
+        }
+    }
+}
+
+.card-users{
+    width: 100%;
+    max-width: 69.5rem;
+    height: 51.2rem;
+    position: relative;
+    .image{
+        border-radius: 3.2rem;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .info-rating{
+        width: 100%;
+        max-width: 58.7rem;
+        height: 27.6rem;
+        border-radius: 2.4rem;
+        background: var(--white-01);
+        position: absolute;
+        bottom: 6.9rem;
+        right: -50.5rem;
+        padding: 4.4rem 5.6rem 4.4rem 4.4rem;
+       .top{
+        margin-bottom: 3.2rem;
+        p{
+            margin-top: 2.4rem;
+            max-width: 48.7rem;
+        }
+       }
+       .headings{
+         h3{
+            margin-bottom: 0.4rem;
+         }
+       }
+    }
+}
+
+.accordion{
+    border-radius: 1.6rem;
+    border: 1.5px solid var(--white-03);
+    transition: height .3s;
+    height: 6.4rem;
+    width: 100%;
+    max-width: 50.2rem;
+    padding: 2rem;
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        img{
+            transition: transform .3s;
+        }
+    }
+    .p-class{
+        display: none;
+    }
+    &.active{
+        height: 12.8rem;
+        .p-class{
+            display: block;
+            animation: Fade .3s;
+            max-width: 36.9rem;
+            margin-top: 1.6rem;
+        }
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes Fade{
+        from{
+           opacity: 0;
+           transform: translateX(2rem);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
